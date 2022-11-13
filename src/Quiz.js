@@ -10,8 +10,12 @@ class Quiz extends Component {
 		this.state = {quiz_position: 1}
 	}
 	showNextQuestion(){
-		//this.setState((state) => {return {quiz_position: state.quiz_position+1}})
-		this.setState({quiz_position: this.state.quiz_position+1})
+		// KYC, ah, https://reactjs.org/docs/state-and-lifecycle.html
+		// there is a reason why this is the correct way to update state
+		// if there is a possibility the update may be async, you
+		// should use this and NOT the one below
+		this.setState((state) => {return {quiz_position: state.quiz_position+1}})
+		//this.setState({quiz_position: this.state.quiz_position+1})
 	}
 
 	render(){
