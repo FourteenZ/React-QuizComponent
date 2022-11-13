@@ -1,10 +1,6 @@
 import React, {Component} from 'react'
 
 class QuizQuestionButton extends Component {
-	construct(props){
-		super(props)
-		this.state = {clickHandler: this.handleClick.bind(this)}
-	}
 	handleClick(){
 
 	}
